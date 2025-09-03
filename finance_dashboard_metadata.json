@@ -1,0 +1,44 @@
+{
+    "name": "Advanced Personal Finance Dashboard",
+    "type": "React Single-file Component",
+    "features": [
+        "Authentication with Firebase (Google & Email)",
+        "Cloud sync with Firestore (transactions, budgets, goals, investments, prefs)",
+        "Recurring transactions engine",
+        "Financial goals with progress & deadlines",
+        "Multi-currency support with exchange-rate fetch",
+        "AI-like insights (rule-based) and balance forecasting",
+        "PDF & CSV export",
+        "Dark mode / theme switching",
+        "Investment & net worth tracking",
+        "Browser notifications for budget alerts",
+        "CSV Import & placeholder for bank integration"
+    ],
+    "config": {
+        "firebase": {
+            "apiKey": "YOUR_FIREBASE_API_KEY",
+            "authDomain": "YOUR_PROJECT.firebaseapp.com",
+            "projectId": "YOUR_PROJECT_ID",
+            "storageBucket": "YOUR_PROJECT.appspot.com",
+            "messagingSenderId": "SENDER_ID",
+            "appId": "APP_ID"
+        },
+        "exchange_api": "https://api.exchangerate.host/latest"
+    },
+    "state": {
+        "transactions": "[]",
+        "budgets": "{}",
+        "goals": "[]",
+        "investments": "[]",
+        "prefs": "{ currency: 'INR', theme: 'light', alerts: true }",
+        "rates": "{}"
+    },
+    "subcomponents": [
+        "AddTxnForm",
+        "Summary",
+        "GoalPanel",
+        "InvestmentPanel"
+    ],
+    "exported_component": "AdvancedFinanceApp",
+    "notes": "This is a starter implementation \u2014 wire up real API keys (Firebase, exchange rates, bank aggregator) to enable full features."
+}
